@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erika Magnaye | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #0f172a 100%);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(30, 64, 175, 0.3);
+        }
+        
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.2);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            bottom: -2px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .profile-img {
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-blue-400 font-bold text-xl">Erika Magnaye</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-blue-400 hover:text-blue-300">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-blue-300">About Me</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-blue-300">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-blue-300">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-blue-300">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-2 pt-2 pb-3">
+            <a href="#home" class="block px-3 py-2 rounded-md text-blue-400">Home</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-gray-300 hover:text-blue-300">About Me</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-gray-300 hover:text-blue-300">Skills</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-gray-300 hover:text-blue-300">Projects</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-gray-300 hover:text-blue-300">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Hi, I'm <span class="text-blue-400">Erika Magnaye</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-white-300">Aspiring Software Developer</h2>
+                <p class="text-lg mb-8 max-w-lg">I am a passionate IT professional who have a strong foundation in building software applications and transform ideas into a real world platforms.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition duration-300">Get In Touch</a>
+                    <a href="#projects" class="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-full font-medium transition duration-300">View Projects</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="profile-img w-50 h-50 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-400 transition-all duration-300 hover:border-blue-500">
+                    <img src="images/erika.JPG" alt=".." class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-400">About Me</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-2/5 flex justify-center">
+                    <div class="w-80 h-80 bg-gray-700 rounded-xl overflow-hidden">
+                        <img src="images/coding.jpg" alt="Software developer " class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="md:w-3/5">
+                    
+                    <p class="mb-6 text-gray-300">I'm a Fresh graduate looking for an opportunity to grow, expand, and contribute my skills in a dynamic company. I am adaptable, loves exploring different fields, and an aspiring software developer ready to kickstart my career in a corporate setting</p>
+                    
+                    <h4 class="text-xl font-semibold mb-3">Education</h4>
+                    <ul class="mb-6 space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-graduation-cap text-blue-400 mt-1 mr-3"></i>
+                           <h4 class="font-semibold"></h4>
+                            <div>
+                                <h5 class="font-medium">Bachelor of Science in Information Technology (2021-2025)</h5>
+                                <p class="text-sm">Batangas State University - Lipa City | The National Engineering University</p>
+                                <p class="text-sm">General Weighted Average :  <strong>1.4970</strong></p>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                    
+                    <h4 class="text-xl font-semibold mb-3">Experience</h4>
+                    <ul class="space-y-4 text-gray-300">
+                          <li class="flex items-start">
+                            <i class="fas fa-briefcase text-blue-400 mt-1 mr-3"></i>
+                            <div>
+                                <h5 class="font-medium">Training - Computer Systems Servicing NCII (May-June 2025)</h5>
+                                <p class="text-sm">Attended a 35 days training for CSS NCII gaining a comprehensive skills in installing and configuring computer systems, Operating System formatting, setting up computer networks, setting up
+                                    computer servers, back up data, remote desktop connection, and other valuable experience. </p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-briefcase text-blue-400 mt-1 mr-3"></i>
+                            <div>
+                                <h5 class="font-medium">Internship - Software Developer (February - May 2025)</h5>
+                                <p class="text-sm">Contributed in the development of Employee record management system for the municipality of Mataas na Kahoy allowing Human Resource staff to easily manage employees record and generate certifications </p>
+                            </div>
+                        </li>
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-400">Technical Skills</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <i class="fab fa-html5 text-orange-500 text-4xl mb-3"></i>
+        <h3 class="font-semibold">HTML</h3>
+        <p class="text-sm text-gray-400">HTML5</p>
+    </div>
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <i class="fab fa-css3 text-blue-500 text-4xl mb-3"></i>
+        <h3 class="font-semibold">CSS</h3>
+        <p class="text-sm text-gray-400">CSS3</p>
+    </div>
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <i class="fab fa-js text-yellow-400 text-4xl mb-3"></i>
+        <h3 class="font-semibold">JavaScript</h3>
+        <p class="text-sm text-gray-400">ES6+, TypeScript</p>
+    </div>
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <i class="fab fa-bootstrap text-purple-600 text-4xl mb-3"></i>
+        <h3 class="font-semibold">Bootstrap</h3>
+        <p class="text-sm text-gray-400">Responsive Framework</p>
+    </div>
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <i class="fab fa-php text-blue-600 text-4xl mb-3"></i>
+        <h3 class="font-semibold">PHP</h3>
+        <p class="text-sm text-gray-400">Server-side scripting</p>
+    </div>
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <i class="fab fa-java text-red-600 text-4xl mb-3"></i>
+        <h3 class="font-semibold">Java</h3>
+        <p class="text-sm text-gray-400">Object-oriented</p>
+    </div>
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <img src="images/c++.png" alt="C++ Icon" class="w-10 h-10 mx-auto mb-3">
+         <h3 class="font-semibold">C++</h3>
+        <p class="text-sm text-gray-400">Object-oriented</p>
+    </div>
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <img src="images/csharp.png" alt="c# Icon" class="w-10 h-10 mx-auto mb-3">
+        <h3 class="font-semibold">C#</h3>
+        <p class="text-sm text-gray-400">Microsoft .NET</p>
+    </div>
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <img src="images/flutter.png" alt="Flutter Icon" class="w-10 h-10 mx-auto mb-3">
+         <h3 class="font-semibold">Flutter</h3>
+        <p class="text-sm text-gray-400">Mobile Development</p>
+    </div>
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <img src="images/vb.png" alt="vb Icon" class="w-10 h-10 mx-auto mb-3">
+         <h3 class="font-semibold">Visual Basic.Net</h3>
+        <p class="text-sm text-gray-400">Windows Applications</p>
+    </div>
+  
+    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <i class="fab fa-figma text-blue-500 text-4xl mb-3"></i>
+        <h3 class="font-semibold">UI/UX</h3>
+        <p class="text-sm text-gray-400">Figma</p>
+    </div>
+      <div class="skill-card bg-gray-800 p-6 rounded-lg text-center transition-all duration-300 hover:bg-gray-700">
+        <i class="fas fa-database text-blue-300 text-4xl mb-3"></i>
+        <h3 class="font-semibold">Database</h3>
+        <p class="text-sm text-gray-400">MySQL</p>
+    </div>
+ </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-400">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-gray-900 rounded-lg overflow-hidden transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/educ.png" alt=".." class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Educational Assistance</h3>
+                        <p class="text-gray-400 mb-4">Application portal simplifying the process for student and educational assistance facilitator with email notification, analytics, compaint form and reports.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">HTML</span>
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">Bootstrap</span>
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">JavaScript</span>
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">PHP</span>
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">MySQL</span>
+                        </div>
+                      <!--  <div class="flex space-x-3">
+                            <a href="#" class="text-blue-400 hover:text-blue-300">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-gray-900 rounded-lg overflow-hidden transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/app.png" alt="Mobile app" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Marketplace App</h3>
+                        <p class="text-gray-400 mb-4">Mobile application for resource generation office of the university offering a smooth transaction of purchasing school items.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">Flutter</span>
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">Dart</span>
+
+                        </div>
+                      <!--  <div class="flex space-x-3">
+                            <a href="#" class="text-blue-400 hover:text-blue-300">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-gray-900 rounded-lg overflow-hidden transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/erm.png" alt=".." class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Employee Record Management</h3>
+                        <p class="text-gray-400 mb-4">Software that has event management and email notification allowing HR staff manage employees record and generate certificates.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                                                <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">HTML</span>
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">Bootstrap</span>
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">JavaScript</span>
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">PHP</span>
+                            <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded-full text-xs">MySQL</span>
+                        </div>
+                      <!--  <div class="flex space-x-3">
+                            <a href="#" class="text-blue-400 hover:text-blue-300">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+        <!--    <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border-2 border-blue-400 text-blue-400 font-medium rounded-full hover:bg-blue-400 hover:text-white transition duration-300">
+                    View All Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-400">Get In Touch</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-blue-400 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <a href="mailto:john.doe@example.com" class="text-gray-400 hover:text-blue-300">erikariyamagnaye31@gmail.com.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-blue-400 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <a href="tel:+11234567890" class="text-gray-400 hover:text-blue-300">+639 914 782 197</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-400 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-gray-400">San Antonio, Quezon</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">Social Profiles</h3>
+                        <div class="flex space-x-6">
+                              <a href="https://github.com/eka31" class="text-gray-500 hover:text-blue-400"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="text-gray-500 hover:text-blue-400"><i class="fab fa-linkedin-in"></i></a>
+                
+                        </div>
+                    </div>
+                    
+                
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold  mb-4">Hire Me</h3>
+                  <div class="mt-8 bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Download Resume</h3>
+                        <p class="text-gray-400 mb-6">Want to know if I am fit for the job? Click the button below to download.</p>
+                        <a href="Job resume-Erika Magnaye.pdf" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition duration-300">
+                            <i class="fas fa-file-pdf mr-2"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   
+    <footer class="py-8 bg-gray-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-500 mb-4">© Erika Magnaye</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com/eka31" class="text-gray-500 hover:text-blue-400"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="text-gray-500 hover:text-blue-400"><i class="fab fa-linkedin-in"></i></a>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
